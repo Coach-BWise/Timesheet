@@ -4,15 +4,7 @@
 // Make sure to match the configuration to the script version number in the HTML
 // (Ex. 3.0 != 3.7.0)
 // Your web app's Firebase configuration
-var config = {
-    apiKey: "AIzaSyA_lw3hbdf9N03UbPrZ1NXRsFAcOD90GRw",
-    authDomain: "timesheet-513c5.firebaseapp.com",
-    databaseURL: "https://timesheet-513c5.firebaseio.com",
-    projectId: "timesheet-513c5",
-    storageBucket: "timesheet-513c5.appspot.com",
-    messagingSenderId: "290725788615",
-    appId: "1:290725788615:web:989967f6ac223da5cc37e2"
-  };
+
   // Initialize Firebase
   firebase.initializeApp(config);
   
@@ -45,6 +37,7 @@ var config = {
     db.ref().push({
         name: $('#inputName').val(),
         role: $('#inputRole').val(),
+        rate: parseInt($("#bidder-price").val().trim()),
         counter: counter,
         dateAdded: firebase.database.ServerValue.TIMESTAMP
     })
@@ -56,3 +49,4 @@ var config = {
   {
     console.log("The read failed: " + errorObject.code);
   })
+

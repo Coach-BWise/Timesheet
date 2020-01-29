@@ -14,6 +14,10 @@
   <!-- Firebase References -->
   <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+  <!-- Moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
     <title>TimeSheet</title>
 </head>
 <body>
@@ -23,7 +27,15 @@
             <div class="card-header">
               Current Employees
             </div>
-            <div class="card-body">
+            <div class="card-body" id="list">
+                <div class="row">
+                    <div class="col-md-2" id="empName">Employee Name</div>
+                    <div class="col-md-2" id="empRole">Role</div>
+                    <div class="col-md-2" id="empDate">Start Date</div>
+                    <div class="col-md-2" id="empMonths">Months Worked</div>
+                    <div class="col-md-2" id="empRate">Monthly Rate ($)</div>
+                    <div class="col-md-2" id="empBilled">Total BIlled ($)</div>
+                </div>
             </div>
         </div>
         <div class="card">
